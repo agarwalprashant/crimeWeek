@@ -41,11 +41,14 @@ angular.module('starter.controllers', ['firebase'])
   };
 })
 
-.controller('BadiKhabareinCtrl', function($scope,$firebaseArray) {
-var rootRef = firebase.database().ref();
-    var badikhabarRef = rootRef.child('Badi Khabarein');
-  $scope.allBadiNews = $firebaseArray(badikhabarRef);
-  // console.log($firebaseArray(rootRef));
+.controller('BadiKhabareinCtrl', function($scope,$firebaseArray,ArticleGetter) {
+$scope.allBadiNews = ArticleGetter.all();
+})
+
+.controller('BadiKhabareinDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   // console.log($stateParams.badiKhabareinId);
+   // debugger;
+$scope.chat = ArticleGetter.get($stateParams.badiKhabareinId);
 
 })
 
@@ -99,8 +102,7 @@ var rootRef = firebase.database().ref();
 var rootRef = firebase.database().ref();
     var textRef = rootRef.child('MainNews');
   $scope.allNews = $firebaseArray(rootRef);
-})
+});
 
-.controller('FashionDetailCtrl', function($scope, $stateParams) {
-})
-;
+
+
