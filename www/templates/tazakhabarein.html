@@ -1,8 +1,13 @@
-<ion-view view-title="{{khabarTitle.$value}}">
+<ion-view view-title="Taza khabarein">
   <ion-content>
-    <h1>Taza Khabar</h1>
+    <ion-list>
+      <ion-item ng-repeat="news in allTazaNews" href="#/app/fashion/{{news.$id}}">
+        <!-- {{news.detail}} -->
+        {{news.snippet}}
+
+      </ion-item>
 
 
-
+    </ion-list>
   </ion-content>
 </ion-view>

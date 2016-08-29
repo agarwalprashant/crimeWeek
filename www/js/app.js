@@ -32,44 +32,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.rashtriya', {
-    url: '/rashtriya',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/rashtriya.html',
-        controller:'RashtriyaCtrl'
-      }
-    }
-  })
-
-  .state('app.cricket', {
-      url: '/cricket',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/cricket.html',
-          controller:'CricketCtrl'
-        }
-      }
-    })
-    .state('app.fashion', {
-      url: '/fashion',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/fashion.html',
-          controller: 'FashionCtrl'
-        }
-      }
-    })
-
-  .state('app.fashionId', {
-    url: '/fashion/:fashionId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/fashiondetail.html',
-        controller: 'FashionDetailCtrl'
-      }
-    }
-  })
+  
+    
 
   .state('app.badiKhabar',{
     url: '/badiKhabarein',
@@ -99,6 +63,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
+
+.state('app.rashtriya', {
+    url: '/rashtriya',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/rashtriya.html',
+        controller:'RashtriyaCtrl'
+      }
+    }
+  })
+
+  .state('app.cricket', {
+      url: '/cricket',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/cricket.html',
+          controller:'CricketCtrl'
+        }
+      }
+    })
 
 
 .state('app.manoranjan',{
@@ -164,6 +148,27 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       'menuContent':{
         templateUrl:'templates/hatke.html',
         controller:'ZaraHatkeCtrl'
+      }
+    }
+  })
+
+
+.state('app.fashion', {
+      url: '/fashion',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/fashion.html',
+          controller: 'FashionCtrl'
+        }
+      }
+    })
+
+  .state('app.fashionId', {
+    url: '/fashion/:fashionId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/fashiondetail.html',
+        controller: 'FashionDetailCtrl'
       }
     }
   });

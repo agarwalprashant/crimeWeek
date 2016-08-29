@@ -1,12 +1,16 @@
 <ion-view view-title="Badi khabarein">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="news in allNews" href="#/app/fashion/{{news.$id}}">
-        {{news.$value}}
+      <ion-item ng-repeat="news in allBadiNews" href="#/app/badiKhabarein/{{news.$id}}">
+        
+        {{news.snippet}}
+        {{news.$id}}
       </ion-item>
 
 
     </ion-list>
   </ion-content>
 </ion-view>
+
+<!-- <pre>{{allBadiNews}}</pre> -->
 

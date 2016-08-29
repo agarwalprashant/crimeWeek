@@ -41,14 +41,26 @@ angular.module('starter.controllers', ['firebase'])
   };
 })
 
-.controller('FashionCtrl', function($scope,$firebaseArray) {
+.controller('BadiKhabareinCtrl', function($scope,$firebaseArray) {
 var rootRef = firebase.database().ref();
-    var textRef = rootRef.child('MainNews');
-  $scope.allNews = $firebaseArray(rootRef);
+    var badikhabarRef = rootRef.child('Badi Khabarein');
+  $scope.allBadiNews = $firebaseArray(badikhabarRef);
+  // console.log($firebaseArray(rootRef));
+
+})
+
+.controller('TazaKhabareinCtrl', function($scope,$firebaseArray,$firebaseObject) {
+var rootRef = firebase.database().ref();
+    var tazakhabarRef = rootRef.child('Taza Khabarein');
+
+  $scope.allTazaNews = $firebaseArray(tazakhabarRef);
+    
+  
 })
 
 
-.controller('FashionDetailCtrl', function($scope, $stateParams) {
+.controller('RajyaCtrl', function($scope, $stateParams) {
+  // $scope.text1 = Articles.text;
 })
 
 .controller("RashtriyaCtrl",function($scope,$firebaseObject){
@@ -58,32 +70,6 @@ var rootRef = firebase.database().ref();
 })
 
 .controller('CricketCtrl', function($scope, $stateParams) {
-})
-
-.controller('BadiKhabareinCtrl', function($scope,$firebaseArray) {
-var rootRef = firebase.database().ref();
-    // var textRef = rootRef.child('MainNews');
-  $scope.allNews = $firebaseArray(rootRef);
-
-})
-
-.controller('TazaKhabareinCtrl', function($scope,$firebaseArray,$firebaseObject) {
-var rootRef = firebase.database().ref();
-    // var textRef = rootRef.child('MainNews');
-  $scope.allNews = $firebaseArray(rootRef);
-$scope.khabarTitle = $firebaseObject(rootRef.child('khabarTitle'));
-})
-
-.controller('RajyaCtrl', function($scope, $stateParams) {
-})
-
-.controller('KhelCtrl', function($scope, $stateParams) {
-})
-
-.controller('AutoCtrl', function($scope, $stateParams) {
-})
-
-.controller('ZaraHatkeCtrl', function($scope, $stateParams) {
 })
 
 .controller('ManoranjanCtrl', function($scope, $stateParams) {
@@ -96,4 +82,25 @@ $scope.khabarTitle = $firebaseObject(rootRef.child('khabarTitle'));
 })
 
 .controller('KaarobarCtrl', function($scope, $stateParams) {
-});
+})
+
+
+.controller('AutoCtrl', function($scope, $stateParams) {
+})
+
+.controller('KhelCtrl', function($scope, $stateParams) {
+})
+
+
+.controller('ZaraHatkeCtrl', function($scope, $stateParams) {
+})
+
+.controller('FashionCtrl', function($scope,$firebaseArray) {
+var rootRef = firebase.database().ref();
+    var textRef = rootRef.child('MainNews');
+  $scope.allNews = $firebaseArray(rootRef);
+})
+
+.controller('FashionDetailCtrl', function($scope, $stateParams) {
+})
+;
