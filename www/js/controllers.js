@@ -99,9 +99,7 @@ var rootRef = firebase.database().ref();
 })
 
 .controller('FashionCtrl', function($scope,$firebaseArray) {
-var rootRef = firebase.database().ref();
-    var textRef = rootRef.child('MainNews');
-  $scope.allNews = $firebaseArray(rootRef);
+
 });
 
 
