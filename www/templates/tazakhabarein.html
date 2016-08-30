@@ -1,7 +1,10 @@
-<ion-view view-title="Badi Khabarein">
+<ion-view view-title="Taza Khabarein">
   <ion-content>
 
+
+
     <ion-list>
+      <img src="{{allTazaNews[0].img}}">
 
 
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="news in allTazaNews" href="#/app/tazaKhabarein/{{news.$id}}">
@@ -9,8 +12,10 @@
       
         
         {{news.snippet}}
+        <h1>hi </h1>
+
         {{news.detail}}
-        {{news.$id}}
+        
            <i class="icon ion-chevron-right icon-accessory"></i>
 
 
