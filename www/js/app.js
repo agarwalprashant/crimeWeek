@@ -44,6 +44,18 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       }
     }
   })
+
+  .state('app.badiKhabareinId', {
+    url: '/badiKhabarein/:badiKhabareinId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/badiKhabareindetail.html',
+        controller: 'BadiKhabareinDetailCtrl'
+      }
+    }
+  })
+
+  
   .state('app.tazakhabar',{
     url: '/tazaKhabarein',
     views:{
@@ -53,6 +65,17 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       }
     }
   })
+
+ .state('app.tazaKhabareinId', {
+    url: '/tazaKhabarein/:tazaKhabareinId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/tazaKhabareindetail.html',
+        controller: 'TazaKhabareinDetailCtrl'
+      }
+    }
+  })
+
 
 .state('app.rajya',{
     url: '/rajya',
@@ -161,17 +184,9 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
           controller: 'FashionCtrl'
         }
       }
-    })
+    });
 
-  .state('app.badiKhabareinId', {
-    url: '/badiKhabarein/:badiKhabareinId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/badiKhabareindetail.html',
-        controller: 'BadiKhabareinDetailCtrl'
-      }
-    }
-  });
+  
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/fashion');
+  $urlRouterProvider.otherwise('/app/badiKhabarein');
 });

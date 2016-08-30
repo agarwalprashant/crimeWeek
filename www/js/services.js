@@ -12,7 +12,7 @@ var rootRef = firebase.database().ref();
 
 
 function all() {
-	// debugger;
+	
 	console.log(allNews);
       return allNews;
     }
@@ -33,34 +33,13 @@ var newsRef = rootRef.child(menuNews);
 var articleRef = newsRef.child(chatId);
  return $firebaseObject(articleRef);
  
-
-
-// for (var i = 0; i < dabbu.length; i++) {
-// 	    if (dabbu[i].$id === chatId) {
-// 	      return dabbu[i];
-// 	    }
-// 	}
-//   return null;
-
-
 }
 
 
-	// function getBadiDetail(chatId){
-			
-	// for (var i = 0; i < allBadiNews.length; i++) {
-	//     if (allBadiNews[i].$id === chatId) {
-	//       return allBadiNews[i];
-	//     }
-	// }
- //  return null;
-	// 	}
-      
-    
-  
+	 
   return {
+
   	all: all,
-  	
   	getDetailNews:getDetailNews,
   	getNews: getNews
    

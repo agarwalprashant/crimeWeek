@@ -41,64 +41,91 @@ angular.module('starter.controllers', ['firebase'])
   };
 })
 
-.controller('BadiKhabareinCtrl', function($scope,$firebaseArray,ArticleGetter) {
-  
-  
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
 
+// badi khabarein controllers
+.controller('BadiKhabareinCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
 })
 
 .controller('BadiKhabareinDetailCtrl', function($scope, $stateParams,ArticleGetter) {
    console.log("clicked on " + $stateParams.badiKhabareinId);
-   
-$scope.chat = ArticleGetter.getDetailNews('BadiKhabar',$stateParams.badiKhabareinId);
+$scope.badiDetail = ArticleGetter.getDetailNews('BadiKhabar',$stateParams.badiKhabareinId);
 
 })
 
-.controller('TazaKhabareinCtrl', function($scope,$firebaseArray,$firebaseObject) {
 
-    
-  
+// taza khabarein controllers
+
+
+.controller('TazaKhabareinCtrl', function($scope,ArticleGetter) {
+  $scope.allTazaNews = ArticleGetter.getNews('TazaKhabar');
+})
+
+.controller('TazaKhabareinDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.tazaKhabareinId);
+$scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKhabareinId);
+
 })
 
 
-.controller('RajyaCtrl', function($scope, $stateParams) {
-  // $scope.text1 = Articles.text;
-})
+//rajya news controllers
 
-.controller("RashtriyaCtrl",function($scope,$firebaseObject){
-
-})
-
-.controller('CricketCtrl', function($scope, $stateParams) {
-})
-
-.controller('ManoranjanCtrl', function($scope, $stateParams) {
-})
-
-.controller('DuniyaCtrl', function($scope, $stateParams) {
-})
-
-.controller('TechGyaanCtrl', function($scope, $stateParams) {
-})
-
-.controller('KaarobarCtrl', function($scope, $stateParams) {
+.controller('RajyaCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
 })
 
 
-.controller('AutoCtrl', function($scope, $stateParams) {
+.controller('RashtriyaCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
 })
 
-.controller('KhelCtrl', function($scope, $stateParams) {
+
+
+
+.controller('CricketCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+})
+
+.controller('ManoranjanCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
 })
 
 
-.controller('ZaraHatkeCtrl', function($scope, $stateParams) {
+
+.controller('DuniyaCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
 })
 
-.controller('FashionCtrl', function($scope,$firebaseArray) {
+.controller('TechGyaanCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+})
 
+
+
+
+.controller('KaarobarCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+})
+
+.controller('AutoCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+})
+
+.controller('KhelCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+})
+
+
+.controller('ZaraHatkeCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+})
+
+.controller('FashionCtrl', function($scope,ArticleGetter) {
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
 });
+
+
+
 
 
 
