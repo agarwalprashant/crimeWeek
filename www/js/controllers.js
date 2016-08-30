@@ -43,16 +43,15 @@ angular.module('starter.controllers', ['firebase'])
 
 .controller('BadiKhabareinCtrl', function($scope,$firebaseArray,ArticleGetter) {
   
-  $scope.allBadiNews = ArticleGetter.getBadiNews();
-  // console.log(allNews);
-  // $scope.badiNews = allNews['0'];
-// $scope.allBadiNews = ArticleGetter.getBadiNews();
+  
+  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+
 })
 
 .controller('BadiKhabareinDetailCtrl', function($scope, $stateParams,ArticleGetter) {
    console.log("clicked on " + $stateParams.badiKhabareinId);
    
-$scope.chat = ArticleGetter.get($stateParams.badiKhabareinId);
+$scope.chat = ArticleGetter.getDetailNews('BadiKhabar',$stateParams.badiKhabareinId);
 
 })
 

@@ -4,11 +4,11 @@ angular.module('starter.services', [])
 
 
 var rootRef = firebase.database().ref();
-var badiNewsRef = rootRef.child('BadiKhabar');
+// var badiNewsRef = rootRef.child('BadiKhabar');
 
-    // var badikhabarRef = rootRef.child('Badi Khabarein');
+    
   var allNews = $firebaseObject(rootRef);
- var allBadiNews = $firebaseArray(badiNewsRef);
+ 
 
 
 function all() {
@@ -17,26 +17,52 @@ function all() {
       return allNews;
     }
 
- function getBadiNews() {
- 	console.log(allBadiNews);
- 	return allBadiNews;
- 	}
+function getNews(menuNews){
+var rootRef = firebase.database().ref();
+var newsRef = rootRef.child(menuNews);
+ return $firebaseArray(newsRef);
 
- 		function get(chatId){
- 			for (var i = 0; i < allBadiNews.length; i++) {
-        if (allBadiNews[i].$id === chatId) {
-          return allBadiNews[i];
-        }
-      }
-      return null;
- 		}
+
+}
+
+
+function getDetailNews(menuNews,chatId){
+	// debugger;
+var rootRef = firebase.database().ref();
+var newsRef = rootRef.child(menuNews);
+ var dabbu = $firebaseArray(newsRef);
+ console.log(dabbu);
+ // console.log(chatId);
+
+
+for (var i = 0; i < dabbu.length; i++) {
+	    if (dabbu[i].$id === chatId) {
+	      return dabbu[i];
+	    }
+	}
+  return null;
+
+
+}
+
+
+	// function getBadiDetail(chatId){
+			
+	// for (var i = 0; i < allBadiNews.length; i++) {
+	//     if (allBadiNews[i].$id === chatId) {
+	//       return allBadiNews[i];
+	//     }
+	// }
+ //  return null;
+	// 	}
       
     
   
   return {
   	all: all,
-  	getBadiNews: getBadiNews,
-  	get:get
+  	
+  	getDetailNews:getDetailNews,
+  	getNews: getNews
    
 
   };
