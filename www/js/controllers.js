@@ -42,21 +42,22 @@ angular.module('starter.controllers', ['firebase'])
 })
 
 .controller('BadiKhabareinCtrl', function($scope,$firebaseArray,ArticleGetter) {
-$scope.allBadiNews = ArticleGetter.all();
+  
+  $scope.allBadiNews = ArticleGetter.getBadiNews();
+  // console.log(allNews);
+  // $scope.badiNews = allNews['0'];
+// $scope.allBadiNews = ArticleGetter.getBadiNews();
 })
 
 .controller('BadiKhabareinDetailCtrl', function($scope, $stateParams,ArticleGetter) {
-   // console.log($stateParams.badiKhabareinId);
-   // debugger;
+   console.log("clicked on " + $stateParams.badiKhabareinId);
+   
 $scope.chat = ArticleGetter.get($stateParams.badiKhabareinId);
 
 })
 
 .controller('TazaKhabareinCtrl', function($scope,$firebaseArray,$firebaseObject) {
-var rootRef = firebase.database().ref();
-    var tazakhabarRef = rootRef.child('Taza Khabarein');
 
-  $scope.allTazaNews = $firebaseArray(tazakhabarRef);
     
   
 })
@@ -67,9 +68,7 @@ var rootRef = firebase.database().ref();
 })
 
 .controller("RashtriyaCtrl",function($scope,$firebaseObject){
-var rootRef = firebase.database().ref();
-    var textRef = rootRef.child('notmainnews');
-  $scope.data = $firebaseObject(textRef);
+
 })
 
 .controller('CricketCtrl', function($scope, $stateParams) {

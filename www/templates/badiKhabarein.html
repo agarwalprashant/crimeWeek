@@ -1,11 +1,16 @@
-<ion-view view-title="Badi khabarein">
+<ion-view view-title="Badi Khabarein">
   <ion-content>
+
     <ion-list>
+
+
       <ion-item ng-repeat="news in allBadiNews" href="#/app/badiKhabarein/{{news.$id}}">
         
         {{news.snippet}}
+        {{news.detail}}
         {{news.$id}}
-                <i class="icon ion-chevron-right icon-accessory"></i>
+           <i class="icon ion-chevron-right icon-accessory"></i>
+
 
       </ion-item>
 
@@ -13,6 +18,4 @@
     </ion-list>
   </ion-content>
 </ion-view>
-
-<!-- <pre>{{allBadiNews}}</pre> -->
 
