@@ -1,8 +1,13 @@
 <ion-view view-title="Badi Khabarein">
   <ion-content>
 
-    <ion-list>
+        <img src="{{allBadiNews[0].img}}" width="360px" height = '150px'>
 
+        <!-- <img src="{{allBadiNews[1].img}}"> -->
+
+
+
+    <ion-list>
 
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="news in allBadiNews" href="#/app/badiKhabarein/{{news.$id}}">
                 <img ng-src="{{news.img}}">

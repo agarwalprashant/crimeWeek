@@ -45,6 +45,8 @@ angular.module('starter.controllers', ['firebase'])
 // badi khabarein controllers
 .controller('BadiKhabareinCtrl', function($scope,ArticleGetter) {
   $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+
+
 })
 
 .controller('BadiKhabareinDetailCtrl', function($scope, $stateParams,ArticleGetter) {
