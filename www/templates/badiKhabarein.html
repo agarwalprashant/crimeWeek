@@ -4,13 +4,16 @@
     <ion-list>
 
 
-      <ion-item ng-repeat="news in allBadiNews" href="#/app/tazaKhabarein/{{news.$id}}">
-        
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="news in allBadiNews" href="#/app/badiKhabarein/{{news.$id}}">
+                <img ng-src="{{news.img}}">
+
         {{news.snippet}}
         {{news.detail}}
         {{news.$id}}
            <i class="icon ion-chevron-right icon-accessory"></i>
 
+
+       
 
       </ion-item>
 
