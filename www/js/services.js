@@ -30,17 +30,17 @@ function getDetailNews(menuNews,chatId){
 	// debugger;
 var rootRef = firebase.database().ref();
 var newsRef = rootRef.child(menuNews);
- var dabbu = $firebaseArray(newsRef);
- console.log(dabbu);
- // console.log(chatId);
+var articleRef = newsRef.child(chatId);
+ return $firebaseObject(articleRef);
+ 
 
 
-for (var i = 0; i < dabbu.length; i++) {
-	    if (dabbu[i].$id === chatId) {
-	      return dabbu[i];
-	    }
-	}
-  return null;
+// for (var i = 0; i < dabbu.length; i++) {
+// 	    if (dabbu[i].$id === chatId) {
+// 	      return dabbu[i];
+// 	    }
+// 	}
+//   return null;
 
 
 }
