@@ -4,28 +4,34 @@
     <h1 class="title">Badi News</h1>
     </ion-header-bar>
   <ion-content class="has-header padding" ng-controller="BadiKhabareinCtrl">
+
       <br><br>
+     
 
       <div class="item item-divider">
-      <i class="ion-images"></i>
-      My Images
+      <i class="ion-images"></i> 
+      News Preview
     </div>
+
+
 
     <a class="item item-list-detail">
       <ion-scroll direction="x">
         <img ng-repeat="image in allImages" ng-src="{{image.img}}" ng-click="showImages($index)" class="image-list-thumb"/>
       </ion-scroll>
     </a>
+
+
     <br><br>
 
-    <div class="button-bar">
+   <!--  <div class="button-bar">
     <button class="button button-outline button-positive" ng-click="playVideo()">Play a video</button>
-  </div>
+  </div> -->
 
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="news in allBadiNews" href="#/app/badiKhabarein/{{news.$id}}">
                 <img ng-src="{{news.img}}">
-
+                
         {{news.snippet}}
         <h1>hi </h1>
         {{news.detail}}
@@ -33,34 +39,11 @@
            <i class="icon ion-chevron-right icon-accessory"></i>
 
       </ion-item>
-
-
     </ion-list>
+
+
   </ion-content>
 </ion-pane>
 
 
 
-<!-- <ion-pane>
-    <ion-header-bar class="bar-stable">
-    <h1 class="title">Badi News</h1>
-    </ion-header-bar>
-    <ion-content class="has-header padding" ng-controller="MediaCtrl">
-      <br><br>
-    <div class="item item-divider">
-      <i class="ion-images"></i>
-      My Images
-    </div>
-    <a class="item item-list-detail">
-      <ion-scroll direction="x">
-        <img ng-repeat="image in allImages" ng-src="{{image.src}}" ng-click="showImages($index)" class="image-list-thumb"/>
-      </ion-scroll>
-    </a>
-    <br><br>
-    <div class="button-bar">
-    <button class="button button-outline button-positive" ng-click="playVideo()">Play a video</button>
-  </div>
-    </ion-content>
-  </ion-pane>
-
- -->
