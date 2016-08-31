@@ -90,6 +90,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
     }
   })
 
+.state('app.rajyaId', {
+    url: '/rajya/:rajyaId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/rajyaDetail.html',
+        controller: 'RajyaDetailCtrl'
+      }
+    }
+  })
+
 .state('app.rashtriya', {
     url: '/rashtriya',
     views: {

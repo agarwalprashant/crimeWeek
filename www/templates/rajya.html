@@ -1,8 +1,35 @@
-<ion-view view-title="Rajya News">
+<ion-view view-title="Rajya Khabarein">
   <ion-content>
-    <h1>Rajya News</h1>
-    <h1>{{text1}}</h1>
+<br>
+       <div>
+        <i class = "icon icon ion-ios-calendar-outline"></i>
+       {{date}}
+       </div>
 
+<br>
+
+
+    <ion-list>
+      <img src="{{allRajyaNews[0].img}}" width="150px" height="100px">
+
+
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="news in allRajyaNews" href="#/app/rajya/{{news.$id}}">
+                <img ng-src="{{news.img}}">
+      
+        
+        {{news.snippet}}
+
+        {{news.detail}}
+        <br>
+
+           {{date}}     
+        
+           <i class="icon ion-chevron-right icon-accessory"></i>
+
+
+      </ion-item>
+
+
+    </ion-list>
   </ion-content>
 </ion-view>
-

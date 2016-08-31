@@ -45,7 +45,7 @@ angular.module('starter.controllers', ['firebase'])
 // badi khabarein controllers  start 
 .controller('BadiKhabareinCtrl', function($scope,ArticleGetter,$ionicModal,$firebaseArray) {
   $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
-
+  $scope.date = ((new Date()).toDateString());
   $scope.allImages = $scope.allBadiNews;
  
   $scope.showImages = function(index) {
@@ -85,6 +85,8 @@ $scope.badiDetail = ArticleGetter.getDetailNews('BadiKhabar',$stateParams.badiKh
 // taza khabarein controllers
 .controller('TazaKhabareinCtrl', function($scope,ArticleGetter) {
   $scope.allTazaNews = ArticleGetter.getNews('TazaKhabar');
+  $scope.date = ((new Date()).toDateString());
+
 })
 
 .controller('TazaKhabareinDetailCtrl', function($scope, $stateParams,ArticleGetter) {
@@ -102,7 +104,15 @@ $scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKh
 
 //rajya news controllers start
 .controller('RajyaCtrl', function($scope,ArticleGetter) {
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+  $scope.allRajyaNews = ArticleGetter.getNews('RajyaKhabar');
+  $scope.date = ((new Date()).toDateString());
+  
+})
+
+.controller('RajyaDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.rajyaId);
+$scope.RajyaDetail = ArticleGetter.getDetailNews('RajyaKhabar',$stateParams.rajyaId);
+
 })
 //rajya news controllers end
 
@@ -113,7 +123,8 @@ $scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKh
 
 //rashtriya news controllers begin
 .controller('RashtriyaCtrl', function($scope,ArticleGetter) {
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+  $scope.allRashtriyaNews = ArticleGetter.getNews('RashtriyaKhabar');
+  $scope.date = ((new Date()).toDateString());
 })
 //rashtriya news controllers end
 
@@ -123,7 +134,8 @@ $scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKh
 
 //cricket news controllers begin
 .controller('CricketCtrl', function($scope,ArticleGetter) {
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+  $scope.allCricketNews = ArticleGetter.getNews('CricketKhabar');
+  $scope.date = ((new Date()).toDateString());
 })
 //cricket news controllers end
 
@@ -133,7 +145,8 @@ $scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKh
 
 //manoranjan news controllers begin
 .controller('ManoranjanCtrl', function($scope,ArticleGetter) {
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+  $scope.allManoranjanNews = ArticleGetter.getNews('ManoranjanKhabar');
+  $scope.date = ((new Date()).toDateString());
 })
 //manoranjan news controllers end
 
@@ -144,7 +157,8 @@ $scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKh
 
 //duniya news controllers begin
 .controller('DuniyaCtrl', function($scope,ArticleGetter) {
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+  $scope.allDuniyaNews = ArticleGetter.getNews('DuniyaKhabar');
+  $scope.date = ((new Date()).toDateString());
 })
 //duniya news controllers end
 
@@ -154,7 +168,8 @@ $scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKh
 
 //techgyaan news controllers begin
 .controller('TechGyaanCtrl', function($scope,ArticleGetter) {
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+  $scope.allTechNews = ArticleGetter.getNews('TechKhabar');
+  $scope.date = ((new Date()).toDateString());
 })
 //techgyaan news controllers end
 
@@ -165,7 +180,8 @@ $scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKh
 
 //kaarobar news controllers begin
 .controller('KaarobarCtrl', function($scope,ArticleGetter) {
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+  $scope.allKarobaarNews = ArticleGetter.getNews('karobaarKhabar');
+  $scope.date = ((new Date()).toDateString());
 })
 //kaarobar news controllers end
 
@@ -175,7 +191,8 @@ $scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKh
 
 //auto news controllers begin
 .controller('AutoCtrl', function($scope,ArticleGetter) {
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+   $scope.allAutoNews = ArticleGetter.getNews('AutoKhabar');
+  $scope.date = ((new Date()).toDateString());
 })
 //auto news controllers end
 
@@ -184,7 +201,8 @@ $scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKh
 
 //khel news controllers begin
 .controller('KhelCtrl', function($scope,ArticleGetter) {
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+   $scope.allKhelNews = ArticleGetter.getNews('KhelKhabar');
+  $scope.date = ((new Date()).toDateString());
 })
 //khel news controllers end
 
@@ -194,7 +212,8 @@ $scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKh
 
 //zarahatke news controllers begin
 .controller('ZaraHatkeCtrl', function($scope,ArticleGetter) {
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+  $scope.allZaraNews = ArticleGetter.getNews('ZaraKhabar');
+  $scope.date = ((new Date()).toDateString());
 })
 //zarahatke news controllers end
 
@@ -205,7 +224,8 @@ $scope.TazaDetail = ArticleGetter.getDetailNews('TazaKhabar',$stateParams.tazaKh
 
 //fashion news controllers begin
 .controller('FashionCtrl', function($scope,ArticleGetter) {
-  $scope.allBadiNews = ArticleGetter.getNews('BadiKhabar');
+  $scope.allFashionNews = ArticleGetter.getNews('FashionKhabar');
+  $scope.date = ((new Date()).toDateString());
 });
 //fashion news controllers end
 

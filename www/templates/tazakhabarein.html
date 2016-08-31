@@ -1,20 +1,27 @@
 <ion-view view-title="Taza Khabarein">
   <ion-content>
+<br>
+       <div>
+        <i class = "icon icon ion-ios-calendar-outline"></i>
+       {{date}}
+       </div>
 
-
+<br>
+      <img src="{{allTazaNews[0].img}}">
+<br>
 
     <ion-list>
-      <img src="{{allTazaNews[0].img}}">
-
 
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="news in allTazaNews" href="#/app/tazaKhabarein/{{news.$id}}">
                 <img ng-src="{{news.img}}">
       
-        
+          
         {{news.snippet}}
-        <h1>hi </h1>
 
         {{news.detail}}
+        <br>
+           {{date}}     
+
         
            <i class="icon ion-chevron-right icon-accessory"></i>
 

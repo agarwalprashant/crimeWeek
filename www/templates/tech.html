@@ -1,5 +1,39 @@
-<ion-view view-title="TechGyaan News">
+
+
+<ion-view view-title="Tech Khabarein">
   <ion-content>
-    <h1>Tech Gyaan News</h1>
+<br>
+       <div>
+        <i class = "icon icon ion-ios-calendar-outline"></i>
+       {{date}}
+       </div>
+
+<br>
+
+
+    <ion-list>
+      <img src="{{allTechNews[4].img}}" width="150px" height="100px">
+
+
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="news in allTechNews" href="#/app/tech/{{news.$id}}">
+                <img ng-src="{{news.img}}">
+      
+        
+        {{news.snippet}}
+
+        {{news.detail}}
+        <br>
+
+           
+        
+           <i class="icon ion-chevron-right icon-accessory"></i>
+
+
+      </ion-item>
+
+
+    </ion-list>
   </ion-content>
 </ion-view>
+
+
