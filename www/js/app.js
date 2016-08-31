@@ -110,6 +110,17 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
     }
   })
 
+.state('app.rashtriyaId', {
+    url: '/rashtriya/:rashtriyaId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/rashtriyaDetail.html',
+        controller: 'RashtriyaDetailCtrl'
+      }
+    }
+  })
+
+
   .state('app.cricket', {
       url: '/cricket',
       views: {
@@ -120,6 +131,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       }
     })
 
+  .state('app.cricketId', {
+    url: '/cricket/:cricketId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/cricketDetail.html',
+        controller: 'CricketDetailCtrl'
+      }
+    }
+  })
+
 
 .state('app.manoranjan',{
     url: '/manoranjan',
@@ -127,6 +148,16 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       'menuContent':{
         templateUrl:'templates/manoranjan.html',
         controller:'ManoranjanCtrl'
+      }
+    }
+  })
+
+.state('app.manoranjanId', {
+    url: '/manoranjan/:manoranjanId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/manoranjanDetail.html',
+        controller: 'ManoranjanDetailCtrl'
       }
     }
   })
@@ -141,6 +172,18 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       }
     }
   })
+
+
+.state('app.duniyaId', {
+    url: '/duniya/:duniyaId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/duniyaDetail.html',
+        controller: 'DuniyaDetailCtrl'
+      }
+    }
+  })
+
 .state('app.tech',{
     url: '/tech',
     views:{
@@ -150,6 +193,19 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       }
     }
   })
+
+.state('app.techId', {
+    url: '/tech/:techId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/techDetail.html',
+        controller: 'TechDetailCtrl'
+      }
+    }
+  })
+
+
+
 .state('app.kaarobar',{
     url: '/kaarobar',
     views:{
@@ -159,12 +215,34 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       }
     }
   })
+
+
+.state('app.karobaarId', {
+    url: '/kaarobar/:karobaarId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/karobaarDetail.html',
+        controller: 'KarobaarDetailCtrl'
+      }
+    }
+  })
+
 .state('app.auto',{
     url: '/auto',
     views:{
       'menuContent':{
         templateUrl:'templates/auto.html',
         controller:'AutoCtrl'
+      }
+    }
+  })
+
+.state('app.autoId', {
+    url: '/auto/:autoId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/autoDetail.html',
+        controller: 'AutoDetailCtrl'
       }
     }
   })
@@ -178,12 +256,34 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
       }
     }
   })
+
+.state('app.khelId', {
+    url: '/khel/:khelId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/khelDetail.html',
+        controller: 'KhelDetailCtrl'
+      }
+    }
+  })
+
+
 .state('app.zaraHatke',{
     url: '/zaraHatke',
     views:{
       'menuContent':{
         templateUrl:'templates/hatke.html',
         controller:'ZaraHatkeCtrl'
+      }
+    }
+  })
+
+.state('app.hatkeId', {
+    url: '/zaraHatke/:hatkeId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/hatkeDetail.html',
+        controller: 'HatkeDetailCtrl'
       }
     }
   })
@@ -197,7 +297,18 @@ angular.module('starter', ['ionic', 'starter.controllers','starter.services'])
           controller: 'FashionCtrl'
         }
       }
-    });
+    })
+
+
+.state('app.fashionId', {
+    url: '/fashion/:fashionId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/fashionDetail.html',
+        controller: 'FashionDetailCtrl'
+      }
+    }
+  });
 
   
   // if none of the above states are matched, use this as the fallback

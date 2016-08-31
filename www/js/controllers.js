@@ -126,6 +126,12 @@ $scope.RajyaDetail = ArticleGetter.getDetailNews('RajyaKhabar',$stateParams.rajy
   $scope.allRashtriyaNews = ArticleGetter.getNews('RashtriyaKhabar');
   $scope.date = ((new Date()).toDateString());
 })
+
+.controller('RashtriyaDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.rashtriyaId);
+$scope.RashtriyaDetail = ArticleGetter.getDetailNews('RashtriyaKhabar',$stateParams.rashtriyaId);
+
+})
 //rashtriya news controllers end
 
 
@@ -137,6 +143,12 @@ $scope.RajyaDetail = ArticleGetter.getDetailNews('RajyaKhabar',$stateParams.rajy
   $scope.allCricketNews = ArticleGetter.getNews('CricketKhabar');
   $scope.date = ((new Date()).toDateString());
 })
+
+.controller('CricketDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.cricketId);
+$scope.CricketDetail = ArticleGetter.getDetailNews('CricketKhabar',$stateParams.cricketId);
+
+})
 //cricket news controllers end
 
 
@@ -147,6 +159,12 @@ $scope.RajyaDetail = ArticleGetter.getDetailNews('RajyaKhabar',$stateParams.rajy
 .controller('ManoranjanCtrl', function($scope,ArticleGetter) {
   $scope.allManoranjanNews = ArticleGetter.getNews('ManoranjanKhabar');
   $scope.date = ((new Date()).toDateString());
+})
+
+.controller('ManoranjanDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.manoranjanId);
+$scope.ManoranjanDetail = ArticleGetter.getDetailNews('ManoranjanKhabar',$stateParams.manoranjanId);
+
 })
 //manoranjan news controllers end
 
@@ -160,6 +178,12 @@ $scope.RajyaDetail = ArticleGetter.getDetailNews('RajyaKhabar',$stateParams.rajy
   $scope.allDuniyaNews = ArticleGetter.getNews('DuniyaKhabar');
   $scope.date = ((new Date()).toDateString());
 })
+
+.controller('DuniyaDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.duniyaId);
+$scope.DuniyaDetail = ArticleGetter.getDetailNews('DuniyaKhabar',$stateParams.duniyaId);
+
+})
 //duniya news controllers end
 
 
@@ -170,6 +194,12 @@ $scope.RajyaDetail = ArticleGetter.getDetailNews('RajyaKhabar',$stateParams.rajy
 .controller('TechGyaanCtrl', function($scope,ArticleGetter) {
   $scope.allTechNews = ArticleGetter.getNews('TechKhabar');
   $scope.date = ((new Date()).toDateString());
+})
+
+.controller('TechDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.techId);
+$scope.TechDetail = ArticleGetter.getDetailNews('TechKhabar',$stateParams.techId);
+
 })
 //techgyaan news controllers end
 
@@ -183,6 +213,12 @@ $scope.RajyaDetail = ArticleGetter.getDetailNews('RajyaKhabar',$stateParams.rajy
   $scope.allKarobaarNews = ArticleGetter.getNews('karobaarKhabar');
   $scope.date = ((new Date()).toDateString());
 })
+
+.controller('KarobaarDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.karobaarId);
+$scope.KarobaarDetail = ArticleGetter.getDetailNews('karobaarKhabar',$stateParams.karobaarId);
+
+})
 //kaarobar news controllers end
 
 
@@ -194,6 +230,12 @@ $scope.RajyaDetail = ArticleGetter.getDetailNews('RajyaKhabar',$stateParams.rajy
    $scope.allAutoNews = ArticleGetter.getNews('AutoKhabar');
   $scope.date = ((new Date()).toDateString());
 })
+
+.controller('AutoDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.autoId);
+$scope.AutoDetail = ArticleGetter.getDetailNews('AutoKhabar',$stateParams.autoId);
+
+})
 //auto news controllers end
 
 
@@ -203,6 +245,12 @@ $scope.RajyaDetail = ArticleGetter.getDetailNews('RajyaKhabar',$stateParams.rajy
 .controller('KhelCtrl', function($scope,ArticleGetter) {
    $scope.allKhelNews = ArticleGetter.getNews('KhelKhabar');
   $scope.date = ((new Date()).toDateString());
+})
+
+.controller('KhelDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.khelId);
+$scope.KhelDetail = ArticleGetter.getDetailNews('KhelKhabar',$stateParams.khelId);
+
 })
 //khel news controllers end
 
@@ -215,6 +263,12 @@ $scope.RajyaDetail = ArticleGetter.getDetailNews('RajyaKhabar',$stateParams.rajy
   $scope.allZaraNews = ArticleGetter.getNews('ZaraKhabar');
   $scope.date = ((new Date()).toDateString());
 })
+
+.controller('HatkeDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.hatkeId);
+$scope.HatkeDetail = ArticleGetter.getDetailNews('ZaraKhabar',$stateParams.hatkeId);
+
+})
 //zarahatke news controllers end
 
 
@@ -226,6 +280,13 @@ $scope.RajyaDetail = ArticleGetter.getDetailNews('RajyaKhabar',$stateParams.rajy
 .controller('FashionCtrl', function($scope,ArticleGetter) {
   $scope.allFashionNews = ArticleGetter.getNews('FashionKhabar');
   $scope.date = ((new Date()).toDateString());
+})
+
+
+.controller('FashionDetailCtrl', function($scope, $stateParams,ArticleGetter) {
+   console.log("clicked on " + $stateParams.fashionId);
+$scope.FashionDetail = ArticleGetter.getDetailNews('FashionKhabar',$stateParams.fashionId);
+
 });
 //fashion news controllers end
 
