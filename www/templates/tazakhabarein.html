@@ -3,6 +3,27 @@
 <br><br>
 <h3>तजा खबर</h3>
 
+
+<!-- <ion-tabs class = "tabs-icon-only">
+
+   <ion-tab title = "BadiKhabar" icon-on = "ion-ios-filing" 
+      icon-off = "ion-ios-filing-outline" href="/app/badiKhabarein"></ion-tab>
+
+   <ion-tab title = "TazaKhabar" icon-on = "ion-ios-home" 
+      icon-off = "ion-ios-home-outline" href="/app/tazaKhabarein"></ion-tab>
+
+   <ion-tab title = "Rajya" icon-on = "ion-ios-star" 
+      icon-off = "ion-ios-star-outline" href="/app/rajya"></ion-tab>
+
+      <ion-tab title = "Rashtriya" icon-on = "ion-ios-flag" 
+      icon-off = "ion-ios-flag-outline" href="/app/rashtriya"></ion-tab>
+
+   <ion-tab title = "Cricket" icon-on = "ion-ios-tennisball" 
+      icon-off = "ion-ios-tennisball-outline" href="/app/cricket"></ion-tab>
+
+</ion-tabs> -->
+
+
   <ion-content class="has-header padding">
 <br>
        <div align="right">
@@ -10,11 +31,13 @@
        {{date}}
        </div>
 
-<br>
+<!-- <br>
       <img src="{{allTazaNews[0].img}}">
-<br>
+<br> -->
 
     <ion-list>
+
+    <img src="{{allTazaNews[2].img}}" width="150px" height="100px">
 
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="news in allTazaNews" href="#/app/tazaKhabarein/{{news.$id}}">
                 <img ng-src="{{news.img}}">
