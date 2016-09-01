@@ -1,13 +1,19 @@
-<ion-view view-title="बदि खबरैन">
+<ion-view view-title="बदि खबरैन" >
+<br><br>
+<img src="http://www.crime-week.com/img/LOGO.png" width="200px" height="70px">
 
-<ion-header-bar class="bar-stable">
-    <h1 class="title">Badi News</h1>
-    </ion-header-bar>
+
+
+
   <ion-content class="has-header padding" ng-controller="BadiKhabareinCtrl">
 
       <br>
+      <br>
 
-        <div>
+      <br>
+
+
+        <div align="right">
         <i class = "icon icon ion-ios-calendar-outline"></i>
         {{date}}
         </div>
@@ -41,6 +47,9 @@
         {{news.snippet}}
         <!-- {{news.detail}} -->
         <br>
+
+        {{news.timestamp}}
+
            <i class="icon ion-chevron-right icon-accessory"></i>
 
       </ion-item>
@@ -48,7 +57,7 @@
 
 
   </ion-content>
-</ion-view>
+<!-- </ion-view> -->
 
 
 
